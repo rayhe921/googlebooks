@@ -3,8 +3,12 @@ import "./App.css";
 import Navbar from "./components/Navbar"
 import Wrapper from "./components/Wrapper"
 import Header from "./components/Header"
+import CardWrapper from "./components/CardWrapper"
+import Card from "./components/Card"
 
 class App extends Component {
+
+  
   render() {
     return (
       <Wrapper>
@@ -13,10 +17,21 @@ class App extends Component {
           linkOne="Search"
           linkTwo="Saved"
         ></Navbar>
-          <Header
+        <Header
           title="(React) Google Book Search"
           description="Search for and save books of interest"
-          ></Header>
+        ></Header>
+        <CardWrapper
+        title="Book List"
+        >
+          <Card
+            title="Sample Title"
+            author="Sample Author"
+            description="Sample Description"
+          >
+
+          </Card>
+        </CardWrapper>
       </Wrapper>
     );
   }

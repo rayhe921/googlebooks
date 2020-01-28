@@ -3,7 +3,7 @@ import "./style.css";
 
 function Card(props) {
     return (
-        <div class="card mb-3" style="max-width: 540px;">
+        <div class="card mb-3" style={{width: 100 +'rem'}}>
             <div class="row no-gutters">
                 <div class="col-md-4">
                     <img src={props.image} class="card-img" alt={props.title} />
@@ -20,5 +20,5 @@ function Card(props) {
     )
 }
 
-export default Header;
+export default Card;
 
