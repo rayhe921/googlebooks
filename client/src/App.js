@@ -5,6 +5,7 @@ import Wrapper from "./components/Wrapper"
 import Header from "./components/Header"
 import CardWrapper from "./components/CardWrapper"
 import Card from "./components/Card"
+import Search from "./pages/search"
 
 class App extends Component {
 
@@ -21,17 +22,7 @@ class App extends Component {
           title="(React) Google Book Search"
           description="Search for and save books of interest"
         ></Header>
-        <CardWrapper
-        title="Book List"
-        >
-          <Card
-            title="Sample Title"
-            author="Sample Author"
-            description="Sample Description"
-          >
-
-          </Card>
-        </CardWrapper>
+        <Search />
       </Wrapper>
     );
   }
