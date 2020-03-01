@@ -5,7 +5,7 @@ import Header from "../components/Header"
 import CardWrapper from "../components/CardWrapper"
 import Card from "../components/Card"
 
-class Search extends Component {
+class Saved extends Component {
 
   
   render() {
@@ -24,4 +24,4 @@ class Search extends Component {
   }
 }
 
-export default Search;
+export default Saved;

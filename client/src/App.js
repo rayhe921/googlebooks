@@ -1,31 +1,23 @@
-import React, { Component } from "react";
-import "./App.css";
-import Navbar from "./components/Navbar"
-import Wrapper from "./components/Wrapper"
-import Header from "./components/Header"
-import CardWrapper from "./components/CardWrapper"
-import Card from "./components/Card"
-import Search from "./pages/search"
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Search from "./pages/Search";
+import Saved from "./pages/Saved";
+import NoMatch from "./pages/NoMatch";
+import Nav from "./components/Nav";
 
-class App extends Component {
-
-  
-  render() {
-    return (
-      <Wrapper>
-        <Navbar
-          title="Google Books"
-          linkOne="Search"
-          linkTwo="Saved"
-        ></Navbar>
-        <Header
-          title="(React) Google Book Search"
-          description="Search for and save books of interest"
-        ></Header>
-        <Search />
-      </Wrapper>
-    );
-  }
+function App() {
+  return (
+    <Router>
+      <div>
+        <Nav />
+        <Switch>
+          <Route exact path="/" component={Search} />
+          <Route exact path="/saved" component={Saved} />
+          <Route component={NoMatch} />
+        </Switch>
+      </div>
+    </Router>
+  );
 }
 
 export default App;
